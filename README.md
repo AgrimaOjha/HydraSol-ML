@@ -82,10 +82,12 @@ This helps in understanding how close predictions are to real values.
 
 ## 📁 Project Structure
 
-HydraSol-ML/ 
+```
+HydraSol-ML/
 │── HydraSol_ML.ipynb
 │── delaney_solubility_with_descriptors.csv
 │── README.md
+```
 
 ---
 
