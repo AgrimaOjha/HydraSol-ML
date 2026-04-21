@@ -1,126 +1,93 @@
-# 🧪 Molecular Solubility Prediction using Machine Learning
+🧪 Molecular Solubility Prediction using Machine Learning
+🚀 Live Demo
 
-## 📌 Overview
+👉 Try the App Here:
+🔗 https://hydrasol-ml.streamlit.app/
 
-This project focuses on predicting the **aqueous solubility (LogS)** of chemical compounds using machine learning models.
+📌 Overview
 
-The dataset used contains molecular descriptors, which are used as input features to train and evaluate regression models.
+This project focuses on predicting the aqueous solubility (LogS) of chemical compounds using machine learning models.
 
----
+It also includes an interactive Streamlit web app where users can input molecular descriptors and instantly get predictions with insights.
 
-## 📂 Dataset
+📂 Dataset
+Name: delaney_solubility_with_descriptors.csv
+The dataset includes:
+Molecular descriptors (features)
+Experimental solubility values (target)
 
-* **Name:** `delaney_solubility_with_descriptors.csv`
-* The dataset includes:
+📊 The goal is to predict LogS (solubility) from these descriptors.
 
-  * Molecular descriptors (features)
-  * Experimental solubility values (target)
+⚙️ Models Used
+1. Linear Regression
+Baseline model
+Assumes linear relationship between features and target
+2. Random Forest Regressor
+Ensemble-based model
+Captures non-linear patterns
+Provides better generalization
+🧠 Workflow
+Data loading & preprocessing
+Train-test split
+Model training:
+Linear Regression
+Random Forest
+Prediction & evaluation
+Visualization of results
+Deployment using Streamlit
+🌐 Web App Features
 
-📊 The goal is to predict **LogS (solubility)** from these descriptors.
+✨ Interactive UI with sliders
+✨ Real-time prediction updates
+✨ Solubility interpretation (Low / Moderate / High)
+✨ What-if analysis for feature impact
+✨ Clean, modern dashboard design
 
----
+📊 Evaluation Metrics
+Mean Squared Error (MSE): Measures prediction error
+R² Score: Measures how well the model explains variance
+📈 Visualization
 
-## ⚙️ Models Used
+Includes scatter plots comparing:
 
-### 1. Linear Regression
+Actual values (y_test)
+Predicted values (y_pred)
 
-* A simple baseline model
-* Assumes a linear relationship between features and target
+Helps evaluate model accuracy visually.
 
-### 2. Random Forest Regressor
-
-* Ensemble learning method
-* Captures non-linear relationships
-* More robust compared to linear models
-
----
-
-## 🧠 Workflow
-
-1. Load dataset
-2. Split into training and testing sets
-3. Train models:
-
-   * Linear Regression
-   * Random Forest
-4. Make predictions
-5. Evaluate performance using:
-
-   * Mean Squared Error (MSE)
-   * R² Score
-6. Visualize results
-
----
-
-## 📊 Evaluation Metrics
-
-* **Mean Squared Error (MSE):** Measures prediction error
-* **R² Score:** Measures how well the model explains variance
-
----
-
-## 📈 Visualization
-
-The project includes a scatter plot comparing:
-
-* Actual solubility values (y_test)
-* Predicted solubility values (y_pred)
-
-This helps in understanding how close predictions are to real values.
-
----
-
-## 🛠️ Tech Stack
-
-* Python 🐍
-* pandas
-* numpy
-* scikit-learn
-* matplotlib
-
----
-
-## 📁 Project Structure
-
-```
+🛠️ Tech Stack
+Python 🐍
+pandas
+numpy
+scikit-learn
+matplotlib
+Streamlit
+📁 Project Structure
 HydraSol-ML/
-│── HydraSol_ML.ipynb
-│── delaney_solubility_with_descriptors.csv
+│── app.py                  # Streamlit app
+│── HydraSol_ML.ipynb      # Model training notebook
+│── model_features.pkl     # Feature list
+│── solubility_model.pkl   # Trained model
+│── requirements.txt       # Dependencies
+│── dataset.csv
 │── README.md
-```
-
----
-
-## 🚀 How to Run
-
-1. Clone the repository
-2. Install required libraries:
-
-   ```
-   pip install pandas numpy scikit-learn matplotlib
-   ```
-3. Run the notebook
-
----
-
-## 💡 Key Learnings
-
-* Understanding regression models
-* Comparing model performance
-* Importance of evaluation metrics
-* Data visualization for model analysis
-
----
-
-## 🔮 Future Improvements
-
-* Hyperparameter tuning
-* Cross-validation
-* Trying advanced models (XGBoost, Gradient Boosting)
-* Feature selection techniques
-
----
-
-## 👩‍💻 Author
+🚀 How to Run Locally
+git clone https://github.com/AgrimaOjha/HydraSol-ML.git
+cd HydraSol-ML
+pip install -r requirements.txt
+streamlit run app.py
+💡 Key Learnings
+Regression modeling & comparison
+Feature-based prediction systems
+Model evaluation techniques
+Building interactive ML apps
+Deployment using Streamlit Cloud
+🔮 Future Improvements
+Hyperparameter tuning
+Cross-validation
+Advanced models (XGBoost, Gradient Boosting)
+Feature importance visualization
+API integration
+👩‍💻 Author
 
 Made with 🩷 by Agrii
